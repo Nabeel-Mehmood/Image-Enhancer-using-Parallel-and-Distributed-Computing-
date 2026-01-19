@@ -1,0 +1,256 @@
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #1b1f38;
+  color: white;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%; /* Use percentages for responsiveness */
+  background: rgba(27, 31, 56, 0.8);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  box-sizing: border-box; /* Ensures padding does not overflow */
+}
+
+
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #8a3cff;
+  text-transform: uppercase;
+}
+
+.navbar nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #e6e1ff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+  color: #b780ff;
+}
+
+.signup-btn {
+  background: #8a3cff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.signup-btn:hover {
+  background: #b780ff;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 150px 50px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #282c4a, #0e111b);
+}
+
+.hero-content {
+  max-width: 50%;
+  text-align: left;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  color: white;
+}
+
+.hero-content .highlight {
+  color: #8a3cff;
+}
+
+.hero-content p {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #cccccc;
+}
+
+/* Advanced Upload Box */
+.advanced-upload-box {
+  margin-top: 20px;
+  padding: 30px;
+  background: #2a2d45;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.advanced-upload-box:hover {
+  transform: scale(1.05);
+}
+
+.advanced-upload-box input {
+  width: 100%;
+  padding: 15px;
+  background: #1b1f38;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.advanced-upload-box button {
+  background: #8a3cff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.advanced-upload-box button:hover {
+  background: #b780ff;
+}
+
+/* Processed Images Section */
+.processed-images {
+  padding: 50px;
+  background: #1b1f38;
+}
+
+.processed-images h2 {
+  font-size: 2.5rem;
+  color: #8a3cff;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.images-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.image-card {
+  background: #2a2d45;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+.image-card img {
+  width: 100%;
+  border-bottom: 2px solid #8a3cff;
+}
+
+.download-btn {
+  width: 100%;
+  padding: 10px;
+  background: #8a3cff;
+  color: white;
+  border: none;
+  border-radius: 0 0 15px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+  background: #b780ff;
+}
+
+/* Hero Illustration */
+.hero-illustration {
+  position: relative;
+  width: 40%;
+  height: auto;
+}
+
+.phone-mockup {
+  width: 300px;
+  height: 500px;
+  background: linear-gradient(135deg, #8a3cff, #b780ff);
+  border-radius: 30px;
+  margin: auto;
+  box-shadow: 0px 0px 20px 5px rgba(138, 60, 255, 0.7);
+}
+
+/* General Responsiveness */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 20px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-illustration {
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .navbar nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .navbar nav a {
+    margin: 5px 10px;
+  }
+
+  .signup-btn {
+    margin-top: 10px;
+  }
+}
+
+.uploaded-previews {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  overflow-x: auto;
+}
+
+.uploaded-previews img {
+  height: 100px;
+  width: auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
